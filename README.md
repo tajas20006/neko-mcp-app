@@ -2,6 +2,8 @@
 
 かわいい猫をランダムに表示するMCP Appsです。
 
+![](./docs/neko-mcp-app.png)
+
 ## ファイル構成
 
 ```
