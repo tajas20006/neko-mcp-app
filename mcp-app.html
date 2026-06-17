@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>ねこアプリ</title>
+</head>
+<body>
+  <main class="main">
+    <div class="header">
+      <h1 class="title">🐱 ねこアプリ</h1>
+    </div>
+
+    <div id="cat-card" class="cat-card">
+      <div id="loading" class="loading">
+        <div class="paw-loader">🐾</div>
+        <p>読み込み中...</p>
+      </div>
+      <div id="cat-content" class="cat-content hidden">
+        <div class="image-wrapper">
+          <img id="cat-image" class="cat-image" alt="かわいい猫" />
+        </div>
+        <div id="breed-info" class="breed-info hidden">
+          <h2 id="breed-name" class="breed-name"></h2>
+          <p id="breed-description" class="breed-description"></p>
+          <div id="temperament-tags" class="temperament-tags"></div>
+        </div>
+      </div>
+      <div id="error-state" class="error-state hidden">
+        <p>😿 猫を読み込めませんでした</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="next-btn" class="next-btn" disabled>
+        <span class="btn-icon">🐾</span>
+        <span>次の猫</span>
+      </button>
+    </div>
+  </main>
+  <script type="module" src="/src/mcp-app.ts"></script>
+</body>
+</html>

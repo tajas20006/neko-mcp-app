@@ -1,0 +1,32 @@
+{
+  "name": "neko-mcp-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "かわいい猫をランダムに表示する MCP App",
+  "scripts": {
+    "build": "tsc --noEmit && cross-env INPUT=mcp-app.html vite build && tsc -p tsconfig.server.json",
+    "watch": "cross-env INPUT=mcp-app.html vite build --watch",
+    "serve": "tsx --watch main.ts",
+    "serve:stdio": "tsx main.ts --stdio",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run watch\" \"npm run serve\"",
+    "start": "cross-env NODE_ENV=development npm run build && npm run serve"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "latest",
+    "@modelcontextprotocol/sdk": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "concurrently": "latest",
+    "cross-env": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-plugin-singlefile": "latest"
+  }
+}
